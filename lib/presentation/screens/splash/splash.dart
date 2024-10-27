@@ -28,7 +28,7 @@ class _SplashPageState extends State<SplashPage> {
       body: FadedScaleAnimation(
         child: Center(
             child: Image.asset(
-          'assets/images/main_logo.png',
+          AppAssets.mainlogo,
           height: 42,
           width: 139,
         )),

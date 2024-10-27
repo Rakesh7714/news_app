@@ -22,7 +22,7 @@ class _OnBoardPageState extends State<OnBoardPage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Image.asset(
-                'assets/images/main_logo.png',
+                AppAssets.mainlogo,
                 height: 42,
                 width: 139,
                 color: AppColors.secondarycolor,

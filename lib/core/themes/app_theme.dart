@@ -11,7 +11,7 @@ class AppTheme {
   );
 
   static final dark = ThemeData(
-    colorScheme: ColorScheme.fromSeed(seedColor: AppColors.Secondarycolor),
+    colorScheme: ColorScheme.fromSeed(seedColor: AppColors.secondarycolor),
     useMaterial3: true,
     fontFamily: GoogleFonts.poppins().fontFamily,
   );

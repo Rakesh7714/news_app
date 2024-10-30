@@ -1,5 +1,5 @@
 part of 'login_imports.dart';
-
+@RoutePage()
 class Login extends StatefulWidget {
   const Login({super.key});
 

@@ -40,38 +40,15 @@ class _AuthPageState extends State<AuthPage> {
                     .align(TextAlign.left)
                     .make(),
                 24.h.heightBox,
-                ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10.r)),
-                      minimumSize: Size(MediaQuery.of(context).size.width, 44),
-                      backgroundColor: AppColors.secondarycolor,
-                    ),
-                    onPressed: () {
-                      //AutoRouter.of(context).push(AuthRoute());
-                    },
-                    child: "Login"
-                        .text
-                        .color(Colors.white)
-                        .fontWeight(FontWeight.w700)
-                        .make()),
+                PrimaryButton(
+                  title: 'login',
+                  onPressed: () => AutoRouter.of(context).push(Login()),
+                ),
                 8.h.heightBox,
-                ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                          side: BorderSide(color: Colors.white),
-                          borderRadius: BorderRadius.circular(10.r)),
-                      minimumSize: Size(MediaQuery.of(context).size.width, 44),
-                      backgroundColor: Colors.transparent,
-                    ),
-                    onPressed: () {
-                      //AutoRouter.of(context).push(AuthRoute());
-                    },
-                    child: "Register"
-                        .text
-                        .color(Colors.white)
-                        .fontWeight(FontWeight.w700)
-                        .make()),
+                OutlineButton(
+                  title: 'Register',
+                  onPressed: () => AutoRouter.of(context).push(Register()),
+                ),
                 64.h.heightBox
               ],
             ),

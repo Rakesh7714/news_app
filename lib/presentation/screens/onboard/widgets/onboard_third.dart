@@ -14,13 +14,13 @@ class OnBoardThirdPage extends StatelessWidget {
           children: [
             Image.asset(
               'assets/images/onboard_img1.png',
-              height: 333,
-              width: 333,
+              height: 333.h,
+              width: 333.w,
             ),
             'Explore a wide selection of categories, or use the search bar to find specific topics'
                 .text
                 .align(TextAlign.center)
-                .size(16)
+                .size(16.sp)
                 .color(Colors.black)
                 .fontWeight(FontWeight.w500)
                 .make()

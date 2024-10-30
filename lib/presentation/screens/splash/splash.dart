@@ -16,7 +16,7 @@ class _SplashPageState extends State<SplashPage> {
   }
 
   moveToOnBoard() async {
-    await Future.delayed(Duration(seconds: 4), () {
+    await Future.delayed(const Duration(seconds: 4), () {
       AutoRouter.of(context).push(OnBoardRoute());
     });
   }
@@ -28,9 +28,9 @@ class _SplashPageState extends State<SplashPage> {
       body: FadedScaleAnimation(
         child: Center(
             child: Image.asset(
-          AppAssets.mainlogo,
-          height: 42,
-          width: 139,
+          AppAssets.assetsImagesMainLogo,
+          height: 42.h,
+          width: 139.w,
         )),
       ),
     );

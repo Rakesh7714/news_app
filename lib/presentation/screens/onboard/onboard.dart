@@ -22,12 +22,12 @@ class _OnBoardPageState extends State<OnBoardPage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Image.asset(
-                AppAssets.mainlogo,
-                height: 42,
-                width: 139,
+                AppAssets.assetsImagesMainLogo,
+                height: 42.h,
+                width: 139.w,
                 color: AppColors.secondarycolor,
               ),
-              61.heightBox,
+              61.h.heightBox,
               PageView(
                   controller: onboardViewModels.pageController,
                   children: const [
@@ -35,24 +35,27 @@ class _OnBoardPageState extends State<OnBoardPage> {
                     OnBoardSecondPage(),
                     OnBoardThirdPage(),
                   ]).expand(),
-              const SizedBox(
-                height: 61,
+              SizedBox(
+                height: 61.h,
               ),
               ElevatedButton(
+                
                   style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10)),
+                        borderRadius: BorderRadius.circular(10.r)),
                     minimumSize: Size(MediaQuery.of(context).size.width, 44),
                     backgroundColor: AppColors.secondarycolor,
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                   AutoRouter.of(context).push(AuthRoute());
+                  },
                   child: "Get Started"
                       .text
                       .color(Colors.white)
                       .fontWeight(FontWeight.w700)
                       .make()),
-              const SizedBox(
-                height: 61,
+              SizedBox(
+                height: 61.h,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,

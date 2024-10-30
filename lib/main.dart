@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:news_app/core/themes/app_theme.dart';
 import 'package:news_app/presentation/router/router_imports.dart';
 
@@ -12,12 +13,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      debugShowCheckedModeBanner: false,
-      title: 'News App',
-      theme: AppTheme.light,
-      darkTheme: AppTheme.light,
-      routerConfig: appRouter.config(),
+    return ScreenUtilInit(
+      designSize: const Size(390, 844),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      child: MaterialApp.router(
+        debugShowCheckedModeBanner: false,
+        title: 'News App',
+        theme: AppTheme.light,
+        darkTheme: AppTheme.light,
+        routerConfig: appRouter.config(),
+      ),
     );
   }
 }

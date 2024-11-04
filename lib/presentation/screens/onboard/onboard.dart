@@ -38,22 +38,23 @@ class _OnBoardPageState extends State<OnBoardPage> {
               SizedBox(
                 height: 61.h,
               ),
-              ElevatedButton(
+              PrimaryButton(title: 'Get Started', onPressed:()=> AutoRouter.of(context).push(AuthRoute())),
+              // ElevatedButton(
                 
-                  style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.r)),
-                    minimumSize: Size(MediaQuery.of(context).size.width, 44),
-                    backgroundColor: AppColors.secondarycolor,
-                  ),
-                  onPressed: () {
-                   AutoRouter.of(context).push(AuthRoute());
-                  },
-                  child: "Get Started"
-                      .text
-                      .color(Colors.white)
-                      .fontWeight(FontWeight.w700)
-                      .make()),
+              //     style: ElevatedButton.styleFrom(
+              //       shape: RoundedRectangleBorder(
+              //           borderRadius: BorderRadius.circular(10.r)),
+              //       minimumSize: Size(MediaQuery.of(context).size.width, 44),
+              //       backgroundColor: AppColors.secondarycolor,
+              //     ),
+              //     onPressed: () {
+              //      AutoRouter.of(context).push(AuthRoute());
+              //     },
+              //     child: "Get Started"
+              //         .text
+              //         .color(Colors.white)
+              //         .fontWeight(FontWeight.w700)
+              //         .make()),
               SizedBox(
                 height: 61.h,
               ),

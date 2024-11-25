@@ -27,7 +27,7 @@ class _LoginState extends State<Login> {
               Container(
                 height: MediaQuery.sizeOf(context).height,
                 width: MediaQuery.sizeOf(context).width,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(30),
@@ -48,7 +48,7 @@ class _LoginState extends State<Login> {
                       28.h.heightBox,
                       'Email'.text.make(),
                       8.heightBox,
-                      VxTextField(
+                      const VxTextField(
                         contentPaddingLeft: 120,
                         fillColor: Colors.transparent,
                         borderColor: AppColors.secondarycolor,
@@ -59,7 +59,7 @@ class _LoginState extends State<Login> {
                       20.heightBox,
                       'Password'.text.make(),
                       8.heightBox,
-                      VxTextField(
+                      const VxTextField(
                         obscureText: true,
                         isPassword: true,
                         contentPaddingLeft: 120,
@@ -87,7 +87,7 @@ class _LoginState extends State<Login> {
                       ),
                       40.heightBox,
                       PrimaryButton(title: 'Login', onPressed: () {
-                        AutoRouter.of(context).push(General());
+                        AutoRouter.of(context).push(const General());
                       }),
                       20.heightBox,
                       'Don’t have an accont'
@@ -97,9 +97,9 @@ class _LoginState extends State<Login> {
                           .semiBold
                           .withTextSpanChildren([
                         TextSpan(
-                          recognizer: TapGestureRecognizer()..onTap = ()=>AutoRouter.of(context).push(Register()),
+                          recognizer: TapGestureRecognizer()..onTap = ()=>AutoRouter.of(context).push(const Register()),
                             text: ' Sign Up',
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: AppColors.secondarycolor,
                               fontWeight: FontWeight.w700,
                             ))

@@ -17,7 +17,7 @@ class _SplashPageState extends State<SplashPage> {
 
   moveToOnBoard() async {
     await Future.delayed(const Duration(seconds: 4), () {
-      AutoRouter.of(context).push(OnBoardRoute());
+      AutoRouter.of(context).push(const OnBoardRoute());
     });
   }
 

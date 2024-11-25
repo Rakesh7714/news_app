@@ -35,13 +35,18 @@ class _HomeState extends State<Home> {
                     ),
                 itemBuilder: (context, index) {
                   return Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Image.asset(
-                        AppAssets.assetsImagenetflix,
-                        height: 160.h,
-                        width: 220.h,
-                        fit: BoxFit.cover,
-                      ).cornerRadius(20),
+                      GestureDetector(
+                        onTap: ()=>AutoRouter.of(context).push(const HomeDetailsRoute()),
+                        child: Image.asset(
+                          AppAssets.assetsImagenetflix,
+                          height: 120.h,
+                          width: 180.h,
+                          fit: BoxFit.cover,
+                        ).cornerRadius(20),
+                      ),
                       10.w.widthBox,
                       Column(
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -49,8 +54,8 @@ class _HomeState extends State<Home> {
                         children: [
                           'Netflix will charge money for sharing the password'
                               .text
-                              .maxLines(2)
-                              .size(16)
+                              .maxLines(3)
+                              .size(18)
                               .fontWeight(FontWeight.bold)
                               .make(),
                           6.h.heightBox,

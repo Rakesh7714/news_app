@@ -27,7 +27,7 @@ class _RegisterState extends State<Register> {
               Container(
                 height: MediaQuery.sizeOf(context).height,
                 width: MediaQuery.sizeOf(context).width,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(30),
@@ -48,7 +48,7 @@ class _RegisterState extends State<Register> {
                       28.h.heightBox,
                       'Email'.text.make(),
                       8.heightBox,
-                      VxTextField(
+                      const VxTextField(
                         contentPaddingLeft: 120,
                         fillColor: Colors.transparent,
                         borderColor: AppColors.secondarycolor,
@@ -59,7 +59,7 @@ class _RegisterState extends State<Register> {
                       20.heightBox,
                       'Password'.text.make(),
                       8.heightBox,
-                      VxTextField(
+                      const VxTextField(
                         obscureText: true,
                         isPassword: true,
                         contentPaddingLeft: 120,
@@ -72,7 +72,7 @@ class _RegisterState extends State<Register> {
                       20.heightBox,
                       'Confirm Password'.text.make(),
                       8.heightBox,
-                      VxTextField(
+                      const VxTextField(
                         obscureText: true,
                         isPassword: true,
                         contentPaddingLeft: 120,
@@ -100,9 +100,9 @@ class _RegisterState extends State<Register> {
                         TextSpan(
                             recognizer: TapGestureRecognizer()
                               ..onTap =
-                                  () => AutoRouter.of(context).push(Login()),
+                                  () => AutoRouter.of(context).push(const Login()),
                             text: 'Login',
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: AppColors.secondarycolor,
                               fontWeight: FontWeight.w700,
                             ))

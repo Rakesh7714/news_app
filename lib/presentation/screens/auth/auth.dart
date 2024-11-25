@@ -42,12 +42,12 @@ class _AuthPageState extends State<AuthPage> {
                 24.h.heightBox,
                 PrimaryButton(
                   title: 'login',
-                  onPressed: () => AutoRouter.of(context).push(Login()),
+                  onPressed: () => AutoRouter.of(context).push(const Login()),
                 ),
                 8.h.heightBox,
                 OutlineButton(
                   title: 'Register',
-                  onPressed: () => AutoRouter.of(context).push(Register()),
+                  onPressed: () => AutoRouter.of(context).push(const Register()),
                 ),
                 64.h.heightBox
               ],

@@ -41,12 +41,20 @@ class ApiClient {
   }
 
   //postresponse
-  Future<Response> addTags({required String path}) async {
+  Future<Response> Postrequest(
+      {required String path, required dynamic body}) async {
+    // Map body ={
+    //   'title' : 'earpod1',
+    //   'slug' : 'earpod1',
+    // };
+    final options = Options(headers: {
+      "Authorization": "Bearer 2157|Fab1koEeJxTMHECilK3M4FlYrxOBnKsYtLalqyob"
+    });
     try {
       debugPrint(
           "#########################API REQUEST ############################");
       debugPrint("REQUEST URL : ${baseOptions.baseUrl + path}");
-      var response = await dio.post(path);
+      var response = await dio.post(path, data: body, options: options);
       debugPrint(
           "#########################API REsponse ############################");
       debugPrint("Status code : ${response.statusCode}");

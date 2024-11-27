@@ -47,10 +47,17 @@ class _OnBoardPageState extends State<OnBoardPage> {
               //     onPressed: () {
               //       ApiClient().getRequest(path: ApiEndpointUrls.tags);
               //     }),
+              // PrimaryButton(
+              //     title: 'Get Started',
+              //     onPressed: () {
+              //       ApiClient().Postrequest(
+              //           body: {"title": "redmi", "slug": "redmi"},
+              //           path: ApiEndpointUrls.addtags);
+              //     }),
               PrimaryButton(
-                  title: 'Get Started', 
+                  title: 'Get Started',
                   onPressed: () {
-                    ApiClient().addTags(path: ApiEndpointUrls.addtags);
+                    TagsRepo().getallTags();
                   }),
               SizedBox(
                 height: 61.h,
